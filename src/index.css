@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Helvetica', system-ui;
+  }
+}
+
+.light-theme {
+  --c-1: #fff;
+  --c-2: #f4f5f7;
+  --c-4: #ebecf0;
+  --c-3: #ddd;
+  --c-6: #edf2f7;
+  --c-7: #dbeafe;
+  --c-text: #172b4d;
+  --primary: #3920a9;
+  --secondary: #439aff;
+  --c-5: #000;
+}
+
+.dark-theme {
+  --c-1: #222;
+  --c-2: #363737;
+  --c-text: #e2e2e2;
+  --c-3: #888;
+  --c-5: #fff;
+  --c-4: #ebecf0;
+  --c-6: #555;
+  --c-7: #444;
+  --primary: #3920a9;
+  --secondary: #439aff;
+}
+
+@layer components {
+  .btn {
+    @apply whitespace-nowrap rounded-[3px] bg-blue-600 px-3 py-1 text-white hover:bg-blue-700 active:bg-blue-800;
+  }
+  .btn-crystal {
+    @apply rounded-[3px] px-3 py-1 hover:bg-c-6 active:bg-c-7;
+  }
+  .btn-alert {
+    @apply whitespace-nowrap rounded-[3px] bg-red-500 px-3 py-1 text-white hover:bg-red-600 active:bg-red-700;
+  }
+  .btn-icon {
+    @apply rounded-[3px] p-1 hover:bg-c-2;
+  }
+ 
+  .btn-toggle {
+    @apply relative h-[19px] cursor-pointer appearance-none rounded-full bg-slate-300 after:absolute after:top-[1.5px] after:left-[2px] after:h-4 after:w-4 after:rounded-full after:bg-white after:duration-150 after:content-[""] checked:bg-blue-500 checked:after:translate-x-[12px];
+  }
+}
